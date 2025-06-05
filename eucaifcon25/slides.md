@@ -52,8 +52,8 @@ The last comment block of each slide will be treated as slide notes. It will be 
 # A worldwide open source collaboration
 
 <div class="grid grid-cols-[1fr_2fr] gap-4 place-items-center">
-  <img src="static/qibo_github.png">
-  <img src="static/qibo_collaboration.png">
+  <img src="/qibo_github.png">
+  <img src="/qibo_collaboration.png">
 </div>
 <br>
 <div class="grid grid-cols-[2fr_1fr] gap-4 place-items-center">
@@ -62,7 +62,7 @@ The last comment block of each slide will be treated as slide notes. It will be 
 <br>
 <t style="font-size: 15px;">Efthymiou et al, 2020.</t>
 </div>
-<img src="static/qibo_arxiv_qr.svg" width=100>
+<img src="/qibo_arxiv_qr.svg" width=100>
 </div>
 
 ---
@@ -144,7 +144,7 @@ The last comment block of each slide will be treated as slide notes. It will be 
 
 <div class="grid grid-cols-[2fr_1fr] gap-4 place-items-center">
 <div class="grid grid-cols-1 place-items-center">
-<img src="static/example_circuit.svg" width="400"/>
+<img src="/example_circuit.svg" width="400"/>
 <br>
 <img src="https://user-images.githubusercontent.com/89847233/263536880-171e4364-a42f-4e63-92d3-da00cbcd9fbb.gif" width="200"/>
 </div>
@@ -457,7 +457,7 @@ decoding = Expectation(
 <div class="grid grid-cols-1 gap-2 place-items-center">
 
 <div>
-<img src="static/target_function.png" width=250>
+<img src="/target_function.png" width=250>
 </div>
 
 <div>
@@ -465,9 +465,9 @@ decoding = Expectation(
   :initial="{ x: -40, y: 0}"
   :enter="{ x: 0 }"
   :leave="{ x: 50 }">
-<img src="static/fit_sinq.png" width=250>
+<img src="/fit_sinq.png" width=250>
 <div class="flex justify-end">
-<img src="static/nqch_logo.jpg" width=128>
+<img src="/nqch_logo.jpg" width=128>
 </div>
 </div>
 </div>
@@ -487,7 +487,7 @@ decoding = Expectation(
 
 #### Simulated Pauli Noise 
 
-<img src="static/animation_noise.gif" width=300>
+<img src="/animation_noise.gif" width=300>
 
 </div>
 
@@ -498,7 +498,7 @@ decoding = Expectation(
 
 #### CDR mitigation
 
-<img src="static/animation_mit.gif" width=300>
+<img src="/animation_mit.gif" width=300>
 
 <div v-motion
   :initial="{ x: -280, y: -5}"
@@ -530,7 +530,7 @@ decoding_circ = Expectation(
 <!-- Top section: figure with top-right icon -->
 <div class="relative w-[400px] mx-auto">
   <!-- Main image -->
-  <img src="static/rtqem_quark.png" width="350" />
+  <img src="/rtqem_quark.png" width="350" />
 
   <!-- Positioned icon -->
   <img
@@ -551,7 +551,7 @@ decoding_circ = Expectation(
     Robbiati et al.
   </div>
 
-  <img src="static/rtqem_qr.svg" width="128" />
+  <img src="/rtqem_qr.svg" width="128" />
 
 </div>
 
@@ -586,9 +586,9 @@ for epoch in range(50):
 </div>
 
 <div>
-<img src="static/vqe_example.svg">
+<img src="/vqe_example.svg">
 <div class="flex justify-end">
-<img src="static/nqch_logo.jpg" width=128>
+<img src="/nqch_logo.jpg" width=128>
 </div>
 </div>
 
