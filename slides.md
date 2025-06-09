@@ -175,7 +175,7 @@ print(result.state())
 # The Qiboml pipeline
 
 <div class="grid grid-cols-1 place-items-center">
-	<img src="https://private-user-images.githubusercontent.com/62071516/447570252-5baba39f-fffc-43db-8080-f8acad340c63.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDkwMzYwMzYsIm5iZiI6MTc0OTAzNTczNiwicGF0aCI6Ii82MjA3MTUxNi80NDc1NzAyNTItNWJhYmEzOWYtZmZmYy00M2RiLTgwODAtZjhhY2FkMzQwYzYzLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTA2MDQlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwNjA0VDExMTUzNlomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTRjNDFhNmI4ZTM4ZTcxMzBmYWZiZmZiYWJmYThjNTg1MjdkZTUxMTgyNzNiN2QwNDI2MjRhMTU4MDJkZmQxMTMmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.vdobl-iZU6LtQmuL86cUvoS_S_izakJxRGLFZgbgP4g" width=700/>
+	<img src="https://github.com/user-attachments/assets/5baba39f-fffc-43db-8080-f8acad340c63" width=700/>
 </div>
 
 ---
