@@ -1,11 +1,5 @@
-# Welcome to [Slidev](https://github.com/slidevjs/slidev)!
+# Full-stack quantum machine learning on hybrid quantum-classical platform
 
-To start the slide show:
+Slides for the [EuCAIFCon 2025](https://agenda.infn.it/event/43565/). You can checkout the slides at [https://brunoliegibastonliegi.github.io/eucaifcon25/](https://brunoliegibastonliegi.github.io/eucaifcon25/).
 
-- `pnpm install`
-- `pnpm dev`
-- visit <http://localhost:3030>
-
-Edit the [slides.md](./slides.md) to see the changes.
-
-Learn more about Slidev at the [documentation](https://sli.dev/).
+Made with [slidev](https://sli.dev/).
