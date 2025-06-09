@@ -150,7 +150,7 @@ The last comment block of each slide will be treated as slide notes. It will be 
 <img src="https://user-images.githubusercontent.com/89847233/263536880-171e4364-a42f-4e63-92d3-da00cbcd9fbb.gif" width="200"/>
 </div>
 <div>
-```python
+```python {all|5|8,9,11|15,16}
 import numpy as np
 from qibo import Circuit, gates
 
@@ -189,7 +189,7 @@ print(result.state())
 
 #### Interface agnostic
 
-```python
+```python {all|5|6,9|11}
 from qiboml.models.encoding import PhaseEncoding
 from qiboml.models.decoding import Expectation
 
@@ -210,7 +210,7 @@ y = np.sin(x).sum(-1)
 </div>
 
 <div>
-<div v-click=[1]>
+<div v-click=[4]>
 
 #### Torch interface
 
@@ -238,7 +238,7 @@ for epoch in range(10):
 
 ```
 </div>
-<div v-click v-motion
+<div v-click=[5] v-motion
   :initial="{ x: -50, y: -410}"
   :enter="{ x: 0 }"
   :leave="{ x: 50 }">
@@ -436,7 +436,7 @@ y_train = f(x_train)
   :initial="{ x: -40, y: 0}"
   :enter="{ x: 0 }"
   :leave="{ x: 50 }">
-```python
+```python {all|all|2|4-6|12|10}
 # Using qibolab at NQCH
 set_backend("qibolab", platform="sinq-20")
 # Define the transpiler
