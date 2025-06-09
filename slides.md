@@ -141,6 +141,29 @@ The last comment block of each slide will be treated as slide notes. It will be 
 
 ---
 
+# The Quantum Computer
+
+<div class="grid grid-cols-[2fr_1fr] gap-4 items-stretch">
+
+<div>
+<img src="/cryostat.png">
+
+<div class="flex justifu-start">
+<img src="/nqch_logo.jpg" width=128>
+</div>
+
+</div>
+
+<div>
+<img src="/quantum_computer.png" width=200>
+<br>
+<img src="/chips.png" width=250>
+</div>
+
+</div>
+
+---
+
 # Quantum Computation through circuits
 
 <div class="grid grid-cols-[2fr_1fr] gap-4 place-items-center">
