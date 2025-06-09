@@ -175,7 +175,7 @@ print(result.state())
 # The Qiboml pipeline
 
 <div class="grid grid-cols-1 place-items-center">
-	<img src="https://github.com/user-attachments/assets/5baba39f-fffc-43db-8080-f8acad340c63" width=700/>
+	<img src="/qiboml_pipeline.png" width=700/>
 </div>
 
 ---
