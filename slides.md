@@ -5,6 +5,7 @@ colorSchema: light
 # random image from a curated Unsplash collection by Anthony
 # like them? see https://unsplash.com/collections/94734566/slidev
 # background: #D8BFD8
+background: '#f5f0ff'
 # some information about your slides (markdown enabled)
 title: Full-stack quantum machine learning on hybrid quantum-classical platforms 
 info: |
