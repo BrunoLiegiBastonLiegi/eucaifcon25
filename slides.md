@@ -173,6 +173,19 @@ print(result.state())
 
 ---
 
+# Quantum Machine Learning (QML)
+
+<div class="grid grid-cols-1 place-items-center">
+	<img src="/example_circuit_qml.svg" width=700/>
+	
+</div>
+
+- Decode the quantum information contained in the final state
+- Compute the loss
+- Update the gates' parameters to minimize the loss
+
+---
+
 # The Qiboml pipeline
 
 <div class="grid grid-cols-1 place-items-center">
