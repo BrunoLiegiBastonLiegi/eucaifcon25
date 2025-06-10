@@ -225,7 +225,7 @@ print(result.state())
 
 #### Interface agnostic
 
-```python {all|5|6,9|11}
+```python {all|5|6,9|11|all}
 from qiboml.models.encoding import PhaseEncoding
 from qiboml.models.decoding import Expectation
 
@@ -246,11 +246,12 @@ y = np.sin(x).sum(-1)
 </div>
 
 <div>
-<div v-click=[4]>
+<div v-click.after="4">
+<div v-click.hide="7">
 
 #### Torch interface
 
-```python
+```python {all|1,5|8-20}
 from qiboml.interfaces.pytorch import QuantumModel
 import torch
 
@@ -274,14 +275,16 @@ for epoch in range(10):
 
 ```
 </div>
-<div v-click=[5] v-motion
+</div>
+
+<div v-click.after="7" v-motion
   :initial="{ x: -50, y: -410}"
   :enter="{ x: 0 }"
   :leave="{ x: 50 }">
   
 #### Keras interface
 
-```python
+```python {all|all|1,5|8-14}
 from qiboml.interfaces.keras import QuantumModel
 import tensorflow as tf
 
@@ -542,7 +545,7 @@ decoding = Expectation(
   :enter="{ x: -240 }"
   :leave="{ x: -190 }">
 ```python
-decoding_circ = Expectation(
+decoding = Expectation(
     nshots=5000,
     nqubits=1, 
     mitigation_config={
@@ -633,3 +636,27 @@ for epoch in range(50):
 
 ---
 
+# Accelerating QML research
+
+<div class="grid grid-cols-[1.6fr_1fr] gap-1 items-stretch">
+
+<div>
+<v-clicks depth="2">
+	
+- Qiboml: an opensource library for QML applications	
+- Interfaces Qibo to popular ML frameworks (torch, keras, jax/[flax](https://flax.readthedocs.io/en/latest/index.html)?)
+- Deploy on any Qibo-compatible backend: 
+  - *jit* CPU 
+  - GPU 
+  - cloud
+  - selfhosted QPU! 
+  - Tensor Network ([quimb](https://quimb.readthedocs.io/en/latest/) and [matchatea](https://www.quantumtea.it/))?
+
+</v-clicks>
+</div>
+
+<div v-click.after="1">
+<img src="/qiboml_repo.png">
+</div>
+
+</div>
