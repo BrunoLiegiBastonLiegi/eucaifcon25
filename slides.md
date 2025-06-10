@@ -651,12 +651,34 @@ for epoch in range(50):
   - cloud
   - selfhosted QPU! 
   - Tensor Network ([quimb](https://quimb.readthedocs.io/en/latest/) and [matchatea](https://www.quantumtea.it/))?
+- Mitigate errors in real time ([RTQEM](https://arxiv.org/abs/2311.05680))!
 
 </v-clicks>
 </div>
 
 <div v-click.after="1">
 <img src="/qiboml_repo.png">
+
+<br>
+
+<div class="flex justify-end">
+<img src="/qiboml_qr.svg" width=100>
 </div>
+
+</div>
+
+</div>
+
+---
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div class="flex place-content-center">
+
+# Thank you for your attention!
 
 </div>
