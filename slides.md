@@ -53,8 +53,12 @@ The last comment block of each slide will be treated as slide notes. It will be 
 # A worldwide open source collaboration
 
 <div class="grid grid-cols-[1fr_2fr] gap-4 place-items-center">
-  <img src="/qibo_github.png">
-  <img src="/qibo_collaboration.png">
+	<img src="/qibo_github.png">
+	<div style="position: relative;">
+		<div v-click style="position: absolute; top: 47%; left: 55%; width: 20px; height: 20px; border: 2px solid red; background-color: transparent; border-radius: 50%;"></div>
+		<div v-click style="position: absolute; top: 56%; left: 65.5%; width: 20px; height: 20px; border: 2px solid red; background-color: transparent; border-radius: 50%;"></div>
+		<img src="/qibo_collaboration.png">
+	</div>
 </div>
 <br>
 <div class="grid grid-cols-[2fr_1fr] gap-4 place-items-center">
@@ -64,6 +68,29 @@ The last comment block of each slide will be treated as slide notes. It will be 
 <t style="font-size: 15px;">Efthymiou et al, 2020.</t>
 </div>
 <img src="/qibo_arxiv_qr.svg" width=100>
+</div>
+
+---
+
+# The Quantum Computer
+
+<div class="grid grid-cols-[2fr_1fr] gap-4 items-stretch">
+
+<div>
+<img src="/cryostat.png">
+
+<div class="flex justifu-start">
+<img src="/nqch_logo.jpg" width=128>
+</div>
+
+</div>
+
+<div>
+<img src="/quantum_computer.png" width=200>
+<br>
+<img src="/chips.png" width=250>
+</div>
+
 </div>
 
 ---
@@ -141,29 +168,6 @@ The last comment block of each slide will be treated as slide notes. It will be 
 
 ---
 
-# The Quantum Computer
-
-<div class="grid grid-cols-[2fr_1fr] gap-4 items-stretch">
-
-<div>
-<img src="/cryostat.png">
-
-<div class="flex justifu-start">
-<img src="/nqch_logo.jpg" width=128>
-</div>
-
-</div>
-
-<div>
-<img src="/quantum_computer.png" width=200>
-<br>
-<img src="/chips.png" width=250>
-</div>
-
-</div>
-
----
-
 # Quantum Computation through circuits
 
 <div class="grid grid-cols-[2fr_1fr] gap-4 place-items-center">
@@ -212,7 +216,14 @@ print(result.state())
 # The Qiboml pipeline
 
 <div class="grid grid-cols-1 place-items-center">
-	<img src="/qiboml_pipeline.png" width=700/>
+	<div style="position: relative;">
+		<img src="/qiboml_pipeline.png" width=700/>
+		<div v-click=[1] style="position: absolute; top: 14%; left: 2.2%; width: 80px; height: 100px; border: 2px solid red; background-color: transparent;"></div>
+		<div v-click=[2] style="position: absolute; top: 14%; left: 13%; width: 80px; height: 100px; border: 2px solid red; background-color: transparent;"></div>
+		<div v-click=[3] style="position: absolute; top: 14%; left: 24.2%; width: 80px; height: 100px; border: 2px solid red; background-color: transparent;"></div>
+		<div v-click=[4] style="position: absolute; top: 5%; left: 73%; width: 180px; height: 155px; border: 2px solid red; background-color: transparent;"></div>
+		<div v-click=[5] style="position: absolute; top: 51%; left: 2.2%; width: 345px; height: 90px; border: 2px solid red; background-color: transparent;"></div>
+	</div>
 </div>
 
 ---
@@ -505,7 +516,10 @@ decoding = Expectation(
   :initial="{ x: -40, y: 0}"
   :enter="{ x: 0 }"
   :leave="{ x: 50 }">
-<img src="/fit_sinq.png" width=250>
+<div style="position: relative;">
+	<img src="/fit_sinq.png" width=250>
+	<div v-click style="position: absolute; top: 3%; left: 38.5%; width: 20px; height: 40px; border: 2px solid red; background-color: transparent; border-radius: 50%;"></div>
+</div>
 <div class="flex justify-end">
 <img src="/nqch_logo.jpg" width=128>
 </div>
@@ -602,8 +616,9 @@ decoding = Expectation(
 <div class="grid grid-cols-[1fr_3fr] gap-4 items-stretch">
 
 <div>
-```python
-# by default this computes <Z0 + Z1 + Z2>
+```python {all|2|6,8|18|all}
+# by default this computes: 
+# <H> = <Z0 + Z1 + Z2>
 # any observable can be used though
 decoder = Expectation(
 	nqubits=3, 
@@ -626,10 +641,14 @@ for epoch in range(50):
 </div>
 
 <div>
-<img src="/vqe_example.svg">
-<div class="flex justify-end">
-<img src="/nqch_logo.jpg" width=128>
-</div>
+	<img src="/vqe_example.svg">
+	<div class="flex justify-end">
+		<img src="/nqch_logo.jpg" width=128>
+	</div>
+	<div v-click style="position: relative;">
+		<img src="/vqe_all_configs.svg" style="position: absolute; top: -40px; left: 35px; width: 280px;">
+		<h4 style="position: absolute; top: 140px; left: 320px;">(Simulation)</h4>
+	</div>
 </div>
 
 </div>
