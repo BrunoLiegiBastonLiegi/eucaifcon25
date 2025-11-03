@@ -655,6 +655,99 @@ for epoch in range(50):
 
 ---
 
+# Mnitoring calibration over training
+
+<div class="grid grid-cols-[1fr_1fr] gap-4 items-stretch">
+
+<div>
+```python {all|3-8|9-11|12-16|22|all}
+from qibocal import Action, Runcard
+from qiboml.models.calibrator import Calibrator
+
+single_shot_action = Action(
+    id="single_shot",
+    operation="single_shot_classification",
+    parameters={"nshots": 100}
+)
+runcard = Runcard(
+    actions=[single_shot_action,], targets = [8, 3, 13],
+)
+calibrator = Calibrator(
+    runcard=runcard,
+    path=Path("report"),
+    calibrator_frequency=10,
+)
+decoder = Expectation(
+    nqubits=3,
+    nshots=1024,
+    wire_names=[8, 3, 13],
+    transpiler=transpiler,
+    calibrator=calibrator,
+)
+```
+</div>
+
+<div>
+	<div class="flex justify-end">
+	<img src="/vqe_tii.png" width="400">
+	</div>
+	<div class="flex justify-end">
+		<img src="https://avatars.githubusercontent.com/u/59836348?s=200&v=4" width=40>
+	</div>
+
+</div>
+
+</div>
+
+---
+
+# Tensor Network training (experimental)
+
+
+<div class="grid grid-cols-[1fr_1fr] gap-4 items-stretch">
+
+<div>
+<br>
+```python {all|3-5|6-7|8-11|16|all}
+from qibo.hamiltonians import XXZ
+from qiboml.operations.differentiation import QuimbJax
+
+# set the quimb backend
+set_backend("qibotn", platform="quimb", quimb_backend="jax")
+# build your 50 qubits model
+circuit = HardwareEfficient(50, nlayers=3)
+# construct the 50 qubits hamiltonian
+observable = XXZ(50, dense=False)
+# and the decoder
+decoding = Expectation(nqubits, observable=observable)
+# construct the model with the TN differentiation
+model = QuantumModel(
+	circuit_structure=[circuit,], 
+	decoding=decoding, 
+	differentiation=QuimbJax
+)
+```
+</div>
+
+<div>
+	<br>
+	<div class="flex justify-center">
+	<img src="/XXZ_VQE_MPS.png" width="400">
+	</div>
+	
+<div class="flex justify-center">
+<p>
+( Exact Ground State energy estimated <br> through a Bethe ansatz )
+</p>
+</div>
+	
+</div>
+
+</div>
+
+
+---
+
 # Accelerating QML research
 
 <div class="grid grid-cols-[1.6fr_1fr] gap-1 items-stretch">
@@ -669,8 +762,9 @@ for epoch in range(50):
   - GPU 
   - cloud
   - selfhosted QPU! 
-  - Tensor Network ([quimb](https://quimb.readthedocs.io/en/latest/) and [matchatea](https://www.quantumtea.it/))?
+  - Tensor Network ([quimb](https://quimb.readthedocs.io/en/latest/), [matchatea](https://www.quantumtea.it/)?)
 - Mitigate errors in real time ([RTQEM](https://arxiv.org/abs/2311.05680))!
+- Monitor Calibration over training!
 
 </v-clicks>
 </div>
@@ -701,3 +795,25 @@ for epoch in range(50):
 # Thank you for your attention!
 
 </div>
+
+---
+
+# Competitive with Pennylane
+
+
+<h5 align="center">Ten epochs of a <i>n</i>-qubits VQE training</h5>
+
+<div class="grid grid-cols-[1fr_1fr] gap-1 items-stretch">
+	<div>
+		<div v-click.hide="1"><img src="/bench_backprop.png"></div>
+		<div v-click v-motion
+			:initial="{ x: -50, y: -337}"
+			:enter="{ x: 0 }"
+			:leave="{ x: 50 }">
+		<img src="/bench_psr.png"></div>
+	</div>
+	<div>
+		<div v-click.hide="1"><img src="/bench_adjoint.png"></div>
+	</div>
+</div>
+
