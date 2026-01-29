@@ -478,6 +478,34 @@ report(path)
 
 ---
 
+# CZ Calibration
+
+<div class="grid grid-cols-[1.5fr_1fr] gap-4 items-stretch">
+
+<div>
+<img src="/cz_rb.png" width=600>
+<br>
+<img src="/cz_circuit.png" width=400>
+</div>
+
+<div>
+<img src="/snz_pulse.png" width=150>
+<br>
+<img src="/cz_phase_diff.png" width=300>
+</div>
+
+</div>
+
+<div>
+  <img
+    src="https://avatars.githubusercontent.com/u/59836348?s=200&v=4"
+    class="absolute bottom-2 right-2"
+    width="40"
+  />
+</div>
+
+---
+
 # Interfacing ML with Qibo
 
 <svg class="absolute w-0 h-0">
@@ -904,7 +932,7 @@ decoder = Expectation(
 
 ---
 
-# Tensor Network training (experimental)
+# Tensor Network training
 
 
 <div class="grid grid-cols-[1fr_1fr] gap-4 items-stretch">
@@ -951,35 +979,34 @@ model = QuantumModel(
 
 ---
 
-# Accelerating QML research
+# Accelerating QC research with *Qibo*
 
 <div class="grid grid-cols-[1.6fr_1fr] gap-1 items-stretch">
 
 <div>
 <v-clicks depth="2">
 	
-- Qiboml: an opensource library for QML applications	
-- Interfaces Qibo to popular ML frameworks (torch, keras, jax/[flax](https://flax.readthedocs.io/en/latest/index.html)?)
-- Deploy on any Qibo-compatible backend: 
-  - *jit* CPU 
-  - GPU 
-  - cloud
-  - selfhosted QPU! 
-  - Tensor Network ([quimb](https://quimb.readthedocs.io/en/latest/), [matchatea](https://www.quantumtea.it/)?)
-- Mitigate errors in real time ([RTQEM](https://arxiv.org/abs/2311.05680))!
-- Monitor Calibration over training!
+- An opensource ecosystem for QC applications
+- Full stack: from high level representation to low level control
+  - Define the high level abstraction
+  - Deploy on different devices
+	- Simulation: *jit* CPU, GPU, cloud, TN
+	- Real Hardware: cloud and selfhosted QPU! 
+- Integration with complementary tools:
+  - Calibration with *Qibocal*
+  - QML with *Qiboml*
+  - The list is constantly growing:
+	- LLM Agent (*Qibollm*)
+	- Quantum Chemistry (*Qibochem*)
+	- etc... 
 
 </v-clicks>
 </div>
 
 <div v-click.after="1">
-<img src="/qiboml_repo.png">
+<img src="/qiboteam_repo.png">
 
 <br>
-
-<div class="flex justify-end">
-<img src="/qiboml_qr.svg" width=100>
-</div>
 
 </div>
 
