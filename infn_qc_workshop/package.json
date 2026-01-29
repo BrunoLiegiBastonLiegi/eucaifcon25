@@ -1,0 +1,21 @@
+{
+  "name": "eucaifcon25",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "slidev build",
+    "dev": "slidev --open",
+    "export": "slidev export",
+    "deploy": "gh-pages -d dist"
+  },
+  "dependencies": {
+    "@slidev/cli": "^51.8.1",
+    "@slidev/theme-default": "latest",
+    "@slidev/theme-seriph": "latest",
+    "vue": "^3.5.16"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0",
+    "playwright-chromium": "^1.53.0"
+  }
+}
