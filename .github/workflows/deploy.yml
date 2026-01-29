@@ -31,15 +31,27 @@ jobs:
       - name: Install dependencies
         run: nci
 
-      - name: Build
-        run: nr build --base /${{github.event.repository.name}}/
+      - name: Build eucaifcon25
+        run: nr build --base /${{github.event.repository.name}}/eucaifcon25/
+        working-directory: ./eucaifcon25
+
+      - name: Build infn_qc_workshop
+        run: nr build --base /${{github.event.repository.name}}/infn_qc_workshop/
+        working-directory: ./infn_qc_workshop
+
+      - name: Combine outputs
+        run: |
+          mkdir -p combined_dist/eucaifcon25
+          mkdir -p combined_dist/infn_qc_workshop
+          cp -r eucaifcon25/dist/* combined_dist/eucaifcon25/
+          cp -r infn_qc_workshop/dist/* combined_dist/infn_qc_workshop/
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: dist
+          path: combined_dist
 
   deploy:
     environment:
