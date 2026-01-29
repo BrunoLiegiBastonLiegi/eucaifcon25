@@ -28,8 +28,13 @@ jobs:
       - name: Setup @antfu/ni
         run: npm i -g @antfu/ni
 
-      - name: Install dependencies
-        run: nci
+      - name: Install for dependencies eucaifcon25
+        run: npm ci
+        working-directory: ./eucaifcon25
+
+      - name: Install dependencies for infn_qc_workshop
+        run: npm ci
+        working-directory: ./infn_qc_workshop
 
       - name: Build eucaifcon25
         run: nr build --base /${{github.event.repository.name}}/eucaifcon25/
