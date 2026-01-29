@@ -34,11 +34,11 @@ jobs:
         working-directory: ./infn_qc_workshop
 
       - name: Build eucaifcon25
-        run: nr build --base /${{github.event.repository.name}}/eucaifcon25/
+        run: npm run build -- --base /${{github.event.repository.name}}/eucaifcon25/
         working-directory: ./eucaifcon25
 
       - name: Build infn_qc_workshop
-        run: nr build --base /${{github.event.repository.name}}/infn_qc_workshop/
+        run: npm run build -- --base /${{github.event.repository.name}}/infn_qc_workshop/
         working-directory: ./infn_qc_workshop
 
       - name: Combine outputs
